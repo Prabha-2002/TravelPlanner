@@ -23,31 +23,12 @@ public class TripFormController {
         return tripFormService.saveTripForm(tripForm);
     }
 
-//    @GetMapping("/{id}")
-//    public TripForm getTripForm(@PathVariable Long id) {
-//        return tripFormService.getTripForm(id);
-//    }
-
     @GetMapping
     public List<TripForm> getAllTripForms() {
         return tripFormService.getAllTripForms();
     }
     
-    
-//    @GetMapping("/{id}")
-//    public ResponseEntity<TripForm> getTripForm(@PathVariable Long id) {
-//        try {
-//            TripForm tripForm = tripFormService.getTripForm(id);
-//            if (tripForm == null) {
-//                return ResponseEntity.notFound().build();
-//            }
-//            return ResponseEntity.ok(tripForm);
-//        } catch (Exception e) {
-//            // Log the exception
-//            e.printStackTrace();
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-//        }
-//    }
+
     
     @GetMapping("/{id}")
     public TripForm getTripForm(@PathVariable Long id) {
