@@ -80,5 +80,4 @@ public class FieldForm {
 		this.dayForm = dayForm;
 	}
 
-    // Getters and Setters
 }
