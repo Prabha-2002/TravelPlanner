@@ -61,6 +61,4 @@ public class DayForm {
 		this.hotel = hotel;
 	}
     
-
-    // Getters and Setters
 }
