@@ -16,7 +16,7 @@ import java.util.List;
 public class TripController {
 
     @Autowired
-    private TripServiceImpl tripService; // Ensure TripService is correctly injected
+    private TripServiceImpl tripService; 
 
     @PostMapping("/add")
     public Trip createTrip(@RequestBody Trip trip) {
