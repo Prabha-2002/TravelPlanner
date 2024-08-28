@@ -14,7 +14,7 @@ import com.prabha.restapp.serviceimplementation.UserServiceImpl;
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userService; // Autowire the implementation directly
+    private UserServiceImpl userService; 
 
     @PostMapping("/register")
     public User registerUser(@RequestBody User user) {
@@ -35,6 +35,6 @@ public class UserController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         User user = userService.getUserById(id);
-        return user; // If user is null, Spring Boot's default behavior will handle it
+        return user; 
     }
 }
