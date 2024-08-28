@@ -18,9 +18,9 @@ public class AdminServiceImpl implements AdminService {
     public Admin loginAdmin(String name, String password) {
         Admin admin = adminRepository.findByName(name);
         if (admin != null && admin.getPassword().equals(password)) {
-            return admin;  // Successful login
+            return admin; 
         }
-        return null;  // Login failed
+        return null;
     }
     @Override
     public Admin getAdminById(Long id) {
