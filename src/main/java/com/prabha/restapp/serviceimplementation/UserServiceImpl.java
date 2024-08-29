@@ -26,7 +26,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User loginUser(String email, String password) {
-        // Use Optional's methods to handle the possible absence of a User
         return userRepository.findByEmail(email)
                              .filter(user -> user.getPassword().equals(password))
                              .orElse(null);
