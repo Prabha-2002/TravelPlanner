@@ -33,14 +33,6 @@ public class TripRepoImpl implements TripRepository {
 	public List<Trip> findAll() {
 		return entityManager.createQuery("SELECT t FROM Trip t", Trip.class).getResultList();
 	}
-
-//	@Override
-//	public Trip findByLocation(String location) {
-//		TypedQuery<Trip> query = entityManager.createQuery("SELECT t FROM Trip t WHERE t.location = :location",
-//				Trip.class);
-//		query.setParameter("location", location);
-//		return query.getSingleResult();
-//	}
 	
 	public Trip findByLocation(String location) {
 	    return entityManager.createQuery("SELECT t FROM Trip t WHERE t.location = :location", Trip.class)
