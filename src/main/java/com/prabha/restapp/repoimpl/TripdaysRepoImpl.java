@@ -24,10 +24,8 @@ public class TripdaysRepoImpl implements TripdaysRepository {
     @Transactional
     public void save(Tripdays tripdays) {
         if (tripdays.getId() == null) {
-            // If ID is null, it's a new entity
             entityManager.persist(tripdays);
         } else {
-            // If ID is not null, it's an existing entity, so we need to update it
             entityManager.merge(tripdays);
         }
     }
